@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .login-container {
+    @apply min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-cyan-50 px-4 py-12;
+  }
+
+  .login-card {
+    @apply w-full max-w-lg bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden;
+  }
+
+  .login-header {
+    @apply px-8 pt-8 pb-6 text-center bg-gradient-to-r from-blue-50 to-blue-100 text-white mb-6;
+  }
+
+  .header-content {
+    @apply flex items-center;
+  }
+
+  .header-text {
+    @apply flex-1 text-center;
+  }
+
+  .header-logo {
+    @apply flex-shrink-0 mr-4;
+  }
+
+  .logo-image {
+    @apply w-12 h-12 object-contain;
+  }
+
+  .login-title {
+    @apply text-3xl font-bold mb-2 text-blue-600;
+  }
+
+  .login-subtitle {
+    @apply text-blue-600 text-sm font-medium;
+  }
+
+  .login-form {
+    @apply px-8 pb-8 space-y-4;
+  }
+
+  .input-group {
+    @apply space-y-2;
+  }
+
+  .input-label {
+    @apply block text-sm font-semibold text-gray-700 mt-2;
+  }
+
+  .login-input {
+    @apply w-full px-4 py-3 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 
+           focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent
+           transition-all duration-200 ease-in-out
+           hover:border-gray-400 hover:bg-white
+           placeholder:text-gray-400 focus:bg-white focus:shadow-lg focus:scale-[1.02];
+  }
+
+  .error-container {
+    @apply bg-red-50 border border-red-200 rounded-lg p-3;
+  }
+
+  .error-message {
+    @apply text-red-600 text-sm font-medium flex items-center;
+  }
+
+  .login-button {
+    @apply w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700
+           text-white font-semibold py-3 px-4 rounded-lg
+           transform transition-all duration-200 ease-in-out
+           hover:scale-[1.02] hover:shadow-xl
+           active:scale-[0.98]
+           focus:outline-none focus:ring-4 focus:ring-blue-300;
+  }
+
+  .login-footer {
+    @apply pt-6 border-t border-gray-100 text-center;
+  }
+
+  .signup-text {
+    @apply text-sm text-gray-600;
+  }
+
+  .signup-link {
+    @apply text-blue-600 hover:text-blue-800 font-semibold transition-colors duration-200 hover:underline ml-1;
+  }
+}
+
+@layer utilities {
+  @media (max-width: 640px) {
+    .login-container {
+      @apply px-4 py-6;
+    }
+    
+    .login-card {
+      @apply mx-2;
+    }
+    
+    .login-header {
+      @apply px-6 pt-6 pb-4;
+    }
+
+    .header-content {
+      @apply flex-col items-center space-y-3;
+    }
+
+    .header-text {
+      @apply text-center;
+    }
+
+    .header-logo {
+      @apply mr-0 order-first;
+    }
+
+    .logo-image {
+      @apply w-10 h-10;
+    }
+    
+    .login-form {
+      @apply px-6 pb-6;
+    }
+  }
+}
